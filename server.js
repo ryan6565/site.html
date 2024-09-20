@@ -1,7 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
-const path = require('path'); // Ajoute cette ligne
+const path = require('path');
 
 const app = express();
 app.use(cors());
@@ -12,10 +12,23 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-// Route pour servir les fichiers CSS
-app.use('/public', express.static(path.join(__dirname, 'public'))); // Ajoute cette ligne
+// Routes pour servir les autres fichiers HTML
+app.get('/HTMLPage1', (req, res) => {
+    res.sendFile(path.join(__dirname, 'HTMLPage1.html'));
+});
 
-// Connexion à MongoDB
+app.get('/HTMLPage2', (req, res) => {
+    res.sendFile(path.join(__dirname, 'HTMLPage2.html'));
+});
+
+app.get('/HTMLPage3', (req, res) => {
+    res.sendFile(path.join(__dirname, 'HTMLPage3.html'));
+});
+
+// Route pour servir les fichiers CSS
+app.use('/public', express.static(path.join(__dirname, 'public')));
+
+// Connexion Ã  MongoDB
 const uri = "mongodb+srv://stjean:stjeandatabase@cluster0.xf7f4.mongodb.net/mydatabase?retryWrites=true&w=majority";
 
 mongoose.connect(uri, {
@@ -23,12 +36,12 @@ mongoose.connect(uri, {
     useUnifiedTopology: true
 })
     .then(() => {
-        console.log('Connecté à MongoDB');
+        console.log('ConnectÃ© Ã  MongoDB');
     }).catch((error) => {
-        console.error('Erreur de connexion à MongoDB:', error);
+        console.error('Erreur de connexion Ã  MongoDB:', error);
     });
 
-// Schéma pour stocker les données de sûreté
+// SchÃ©ma pour stocker les donnÃ©es de sÃ»retÃ©
 const SafetySchema = new mongoose.Schema({
     className: String,
     status: String,
@@ -37,7 +50,7 @@ const SafetySchema = new mongoose.Schema({
 
 const Safety = mongoose.model('Safety', SafetySchema);
 
-// Route pour mettre à jour la sûreté
+// Route pour mettre Ã  jour la sÃ»retÃ©
 app.post('/update-safety', async (req, res) => {
     const { className, status, description } = req.body;
     try {
@@ -52,11 +65,11 @@ app.post('/update-safety', async (req, res) => {
         }
         res.sendStatus(200);
     } catch (error) {
-        res.status(500).send('Erreur lors de la mise à jour de la sûreté');
+        res.status(500).send('Erreur lors de la mise Ã  jour de la sÃ»retÃ©');
     }
 });
 
-// Route pour obtenir la sûreté et description d'une classe
+// Route pour obtenir la sÃ»retÃ© et description d'une classe
 app.get('/get-safety/:className', async (req, res) => {
     const { className } = req.params;
     try {
@@ -64,15 +77,15 @@ app.get('/get-safety/:className', async (req, res) => {
         if (safety) {
             res.json(safety);
         } else {
-            res.status(404).send('Sûreté non trouvée');
+            res.status(404).send('SÃ»retÃ© non trouvÃ©e');
         }
     } catch (error) {
-        res.status(500).send('Erreur lors de la récupération des données');
+        res.status(500).send('Erreur lors de la rÃ©cupÃ©ration des donnÃ©es');
     }
 });
 
-// Démarrer le serveur
+// DÃ©marrer le serveur
 const port = 3000;
 app.listen(port, () => {
-    console.log(`Serveur en écoute sur le port ${port}`);
+    console.log(`Serveur en Ã©coute sur le port ${port}`);
 });
