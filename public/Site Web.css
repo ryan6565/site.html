@@ -1,0 +1,95 @@
+﻿/* Style global */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #1d1d1d, #282828); /* Dégradé de fond */
+    margin: 0;
+    padding: 0;
+    color: #FFFFFF; /* Texte blanc */
+    transition: background-color 0.5s ease; /* Transition pour le fond */
+}
+
+/* En-tête */
+header {
+    background-color: #3B3B3B; /* Fond gris foncé */
+    color: #F8F8F8; /* Texte très clair */
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Ombre */
+}
+
+.school-logo {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    width: 50px;
+    height: auto;
+}
+
+.header-container h1 {
+    margin: 0;
+    font-size: 2.5em;
+    animation: fadeIn 1s; /* Animation d'apparition */
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Section principale */
+.main-section {
+    padding: 50px 20px;
+    max-width: 800px;
+    margin: 30px auto;
+    text-align: center;
+    background-color: #444444; /* Fond noir légèrement plus clair */
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Ombre */
+    transition: transform 0.3s ease;
+}
+
+    .main-section:hover {
+        transform: scale(1.02); /* Légère augmentation lors du survol */
+    }
+
+    .main-section h2 {
+        margin-bottom: 20px;
+    }
+
+/* Boutons */
+.main-button {
+    display: inline-block;
+    background-color: #66CC66; /* Vert moins foncé */
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 10px 0;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: 1.2em;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Ombre */
+}
+
+    .main-button:hover {
+        background-color: #80D580; /* Vert légèrement plus clair */
+        transform: translateY(-3px); /* Élévation lors du survol */
+    }
+
+/* Pied de page */
+footer {
+    background-color: #3B3B3B; /* Fond gris foncé */
+    color: #F8F8F8; /* Texte très clair */
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.5); /* Ombre */
+}

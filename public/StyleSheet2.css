@@ -1,0 +1,120 @@
+﻿/* Style global */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #1d1d1d, #282828); /* Dégradé de fond */
+    margin: 0;
+    padding: 0;
+    color: #FFFFFF; /* Texte blanc */
+    transition: background-color 0.5s ease; /* Transition pour le fond */
+}
+
+/* En-tête */
+header {
+    background-color: #3B3B3B; /* Fond gris foncé */
+    color: #F8F8F8; /* Texte très clair */
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Ombre */
+}
+
+.school-logo {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    width: 50px;
+    height: auto;
+}
+
+.header-container h1 {
+    margin: 0;
+    font-size: 2.5em;
+    animation: fadeIn 1s; /* Animation d'apparition */
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Section du planning */
+.schedule-section {
+    padding: 50px 20px;
+    max-width: 800px;
+    margin: 30px auto;
+    text-align: center;
+    background-color: #444444; /* Fond noir légèrement plus clair */
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Ombre */
+}
+
+.day-buttons {
+    margin-bottom: 20px;
+}
+
+    .day-buttons button {
+        background-color: #66CC66; /* Vert moins foncé */
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin: 0 5px;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+        .day-buttons button:hover {
+            background-color: #80D580; /* Vert légèrement plus clair */
+            transform: translateY(-3px); /* Élévation lors du survol */
+        }
+
+/* Tableau */
+#hours-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+    #hours-table th, #hours-table td {
+        padding: 10px;
+        border: 1px solid #555555; /* Bordure des cellules */
+        text-align: left;
+    }
+
+    #hours-table th {
+        background-color: #3B3B3B; /* Fond pour l'en-tête */
+        color: #F8F8F8; /* Texte clair pour l'en-tête */
+    }
+
+/* Pied de page */
+footer {
+    background-color: #3B3B3B; /* Fond gris foncé */
+    color: #F8F8F8; /* Texte très clair */
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.5); /* Ombre */
+}
+
+.back-button {
+    margin-top: 20px;
+    display: inline-block;
+    background-color: #66CC66; /* Vert moins foncé */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+    .back-button:hover {
+        background-color: #80D580; /* Vert légèrement plus clair */
+    }

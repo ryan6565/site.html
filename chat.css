@@ -1,0 +1,44 @@
+﻿/* chat.css */
+.chat-section {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 600px;
+    background-color: #333;
+    border-radius: 10px;
+    position: relative; /* Pour positionner le bouton correctement */
+}
+
+#chat-box {
+    height: 200px; /* Ajuste la hauteur pour qu'il soit visible */
+    overflow-y: auto; /* Permet le défilement si nécessaire */
+    border: 1px solid #555;
+    background-color: #222;
+    color: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#message-input {
+    width: calc(100% - 110px); /* Ajuste la largeur pour laisser de la place au bouton */
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #555;
+    box-sizing: border-box; /* Assure que le padding est inclus dans la largeur */
+}
+
+#send-button {
+    width: 100px;
+    padding: 10px;
+    background-color: #E31C4B;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute; /* Positionne le bouton à droite */
+    right: 10px;
+    bottom: 10px;
+}
+
+    #send-button:hover {
+        background-color: #FF2E5E;
+    }

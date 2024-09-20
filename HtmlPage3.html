@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planning Hebdomadaire</title>
+    <link rel="stylesheet" href="public/StyleSheet1.css">
+</head>
+<body>
+
+    <!-- En-tête avec logo, titre et boutons -->
+    <header>
+        <div class="header-container">
+            <a href="https://www.saint-jean-berchmans.be"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT44swC4juDkto_0EjPlgaI51PiCiloscEOOg&s" alt="Logo de l'École" class="school-logo"></a>
+            <h1>Planning Du Groupe 2 de Septembre</h1>
+            <a href="index.html" class="back-button">Retour</a>
+        </div>
+    </header>
+
+    <!-- Section du tableau des horaires -->
+    <section class="schedule-section">
+        <nav class="day-buttons">
+            <button onclick="showDay('lundi')">Lundi</button>
+            <button onclick="showDay('mardi')">Mardi</button>
+            <button onclick="showDay('mercredi')">Mercredi</button>
+            <button onclick="showDay('jeudi')">Jeudi</button>
+            <button onclick="showDay('vendredi')">Vendredi</button>
+        </nav>
+        <table id="hours-table">
+            <thead>
+                <tr>
+                    <th>Heure</th>
+                    <th>Cours</th>
+                    <th>Professeur</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Bouton pour accéder à la page des changements d'horaires -->
+    <div class="button-container">
+        <button class="access-page4-button" onclick="window.location.href='HTMLPage1.html';">Accéder aux Changements d'Horaires</button>
+    </div>
+
+    <footer>
+        <p>&copy; 2024-2025 Saint Jean Berchmans. Tous droits réservés.</p>
+        <p>
+            59, rue des Wallons | 04 229 78 90 - 04 229 78 99 | secretariat@sjb-liege.org
+        </p>
+    </footer>
+
+    <script src="Script3.js"></script>
+</body>
+</html>
