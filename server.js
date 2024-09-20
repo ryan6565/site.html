@@ -18,11 +18,11 @@ app.get('/HTMLPage1', (req, res) => {
 });
 
 app.get('/HTMLPage2', (req, res) => {
-    res.sendFile(path.join(__dirname, 'HTMLPage2.html'));
+    res.sendFile(path.join(__dirname, 'HtmlPage2.html'));
 });
 
 app.get('/HTMLPage3', (req, res) => {
-    res.sendFile(path.join(__dirname, 'HTMLPage3.html'));
+    res.sendFile(path.join(__dirname, 'HtmlPage3.html'));
 });
 
 // Route pour servir les fichiers CSS
